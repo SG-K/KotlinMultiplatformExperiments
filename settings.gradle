@@ -1,0 +1,3 @@
+rootProject.name='KotlinMutiPlatformSample'
+include ':app'
+include ':SharedCode'
