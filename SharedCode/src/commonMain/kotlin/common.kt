@@ -1,5 +1,4 @@
 
-
 expect fun platformName() : String
 
 fun generatingMessageToShow() : String {

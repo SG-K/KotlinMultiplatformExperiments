@@ -2,6 +2,7 @@ import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
 
 plugins {
     kotlin("multiplatform")
+    id("kotlinx-serialization")
 }
 
 kotlin {
@@ -21,14 +22,29 @@ kotlin {
     }
 
     jvm("android")
-
+    val ktor_version = "1.0.0"
     sourceSets["commonMain"].dependencies {
+
         implementation("org.jetbrains.kotlin:kotlin-stdlib-common")
+        implementation ("io.ktor:ktor-client:$ktor_version")
+        implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core-common:1.3.4")
+        implementation ("io.ktor:ktor-client-json:$ktor_version")
+        implementation ("io.ktor:ktor-client-cio:$ktor_version")
+        implementation ("org.jetbrains.kotlinx:kotlinx-serialization-runtime:0.9.1")
     }
 
     sourceSets["androidMain"].dependencies {
         implementation("org.jetbrains.kotlin:kotlin-stdlib")
+//        implementation ("io.ktor:ktor-client-android:1.0.0")
+        implementation ("io.ktor:ktor-client-json-jvm:$ktor_version")
+        implementation ("io.ktor:ktor-client-cio:$ktor_version")
+//        implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.8")
     }
+
+//    sourceSets["iosMain"].dependencies {
+//        implementation ("org.jetbrains.kotlinx:kotlinx-serialization-runtime-native:0.9.1")
+//    }
+
 }
 
 
