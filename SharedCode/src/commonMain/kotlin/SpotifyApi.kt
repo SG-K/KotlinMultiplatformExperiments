@@ -7,7 +7,7 @@ import io.ktor.http.*
 import kotlinx.serialization.json.JSON
 
 const val baseUrl = "https://api.spotify.com/v1/"
-const val token = "BQAm0_chWWAhljgmZhloQruyFYdvZ2XssGEbFwHstjJwNGBWSgtQoxK074knsRB5NlpNqHiu7cbWer21bwy1PjEZx5Xja-JOmiqUB0P5VYvDUkOfKn6Zk3z8KAsIvDfPBd606CvYYX5hqajrGaeHRVkLC7UFPPD7EBZWfL5G_B_pK_phRO1qRpWfY8hTYhp9_do"
+const val token = ""
 
 class SpotifyApi() {
     val client =HttpClient() {
